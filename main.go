@@ -93,7 +93,7 @@ func SolveCubic(a, b, c, d float64) [3]Complex {
 		t[2] = NewComplex(-uReal, 0)
 	} else {
 		rho := math.Sqrt(-P*P*P/27.0) * 2.0
-		phi := math.Acos((-Q/2.0) / math.Sqrt(-P*P*P/27.0))
+		phi := math.Acos((-Q / 2.0) / math.Sqrt(-P*P*P/27.0))
 
 		t[0] = NewComplex(rho*math.Cos(phi/3.0), 0)
 		t[1] = NewComplex(rho*math.Cos((phi+2.0*math.Pi)/3.0), 0)
@@ -111,4 +111,28 @@ func prettyPrint(roots [3]Complex) {
 	for i, root := range roots {
 		fmt.Printf("x%d = %s\n", i+1, root.String())
 	}
+}
+
+func main() {
+	fmt.Println("Решение кубического уравнения a*x^3 + b*x^2 + c*x + d = 0")
+	fmt.Println("Формула Кардано (с комплексными корнями)\n")
+
+	roots1 := SolveCubic(1, -6, 11, -6)
+	prettyPrint(roots1)
+	fmt.Println()
+
+	roots2 := SolveCubic(1, 0, 1, 0)
+	prettyPrint(roots2)
+	fmt.Println()
+
+	roots3 := SolveCubic(1, -3, 3, -1)
+	prettyPrint(roots3)
+	fmt.Println()
+
+	roots4 := SolveCubic(1, 0, -2, -4)
+	prettyPrint(roots4)
+	fmt.Println()
+
+	roots5 := SolveCubic(2, -4, -22, 24)
+	prettyPrint(roots5)
 }
