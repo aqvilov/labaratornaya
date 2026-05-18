@@ -117,22 +117,27 @@ func main() {
 	fmt.Println("Решение кубического уравнения a*x^3 + b*x^2 + c*x + d = 0")
 	fmt.Println("Формула Кардано (с комплексными корнями)\n")
 
+	fmt.Println("Пример 1: 1*x^3 - 6*x^2 + 11*x - 6 = 0")
 	roots1 := SolveCubic(1, -6, 11, -6)
 	prettyPrint(roots1)
 	fmt.Println()
 
+	fmt.Println("Пример 2: 1*x^3 + 0*x^2 + 1*x + 0 = 0")
 	roots2 := SolveCubic(1, 0, 1, 0)
 	prettyPrint(roots2)
 	fmt.Println()
 
+	fmt.Println("Пример 3: 1*x^3 - 3*x^2 + 3*x - 1 = 0")
 	roots3 := SolveCubic(1, -3, 3, -1)
 	prettyPrint(roots3)
 	fmt.Println()
 
+	fmt.Println("Пример 4: 1*x^3 + 0*x^2 - 2*x - 4 = 0")
 	roots4 := SolveCubic(1, 0, -2, -4)
 	prettyPrint(roots4)
 	fmt.Println()
 
+	fmt.Println("Пример 5: 2*x^3 - 4*x^2 - 22*x + 24 = 0")
 	roots5 := SolveCubic(2, -4, -22, 24)
 	prettyPrint(roots5)
 }
