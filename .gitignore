@@ -1,0 +1,7 @@
+*.exe
+logs/
+.vscode/
+.DS_Store
+.git
+.idea/
+node_modules/
