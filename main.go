@@ -110,7 +110,7 @@ func SolveCubic(a, b, c, d float64) [3]Complex {
 func prettyPrint(roots [3]Complex) {
 	fmt.Println("Корни уравнения:")
 	for i, root := range roots {
-		fmt.Printf("x%d = %s\n", i+1, root.String())
+		fmt.Printf("корень %d: %s\n", i+1, root.String())
 	}
 }
 
